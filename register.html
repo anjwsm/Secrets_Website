@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now</title>
+    <style>
+        h1{
+            font-size: 2em ;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            font-weight: bold;
+            margin-left: 60%;
+            margin-top: 10%;
+        }
+        label{
+          margin-left: 50%;
+        
+        }
+        input {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-left: 50%;
+            align-self: center;
+        }
+
+        .btn-primary{
+            border-radius: 20px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 60%;
+            margin-bottom: 10%;
+        }
+        .btn-primary:hover {
+        background-color:orangered;
+         }
+         h5{
+            margin-left:58% ;
+            margin-bottom:99%
+         }
+
+
+    </style>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <div>
+        <form action="./submit" method="post">
+            <p><label for="name"> User Name</label> </p>
+            <p><input type="text"  name="name" /></p>
+        
+            <p><label for="email">Email Address</label></p>
+            <p><input type="email" name="email"/></p>
+
+            <p><label for="password">Password</label></p>>
+            <p><input type="number" name="password"/></p>
+            <button class="btn-primary">Sign Up</button>
+
+        </form>
+    </div>
+  <h5>If you are already registered, <a href="#">Log in </a></h5> 
+</body>
+</html>

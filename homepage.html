@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Arial;
+        }
+        .header {
+            position: fixed;
+            top:0 ;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background-color:black ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+        .secrets{
+            font-size: 2em;
+            color: orangered;
+            user-select: none;
+        }
+        .navigation a {
+            position: relative;
+            font-size: 1.1em;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+        .body {
+            position: fixed;
+            text-align: left;
+            top: 200px;;
+            left: 20;
+            width: 100%;
+            padding: 20px 100px;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 50px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            text-align: left;
+
+        }
+        p{
+            font-size: 25px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        .btn-primary {
+            border-radius: 20px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+        background-color:orangered;
+    }
+
+        
+        
+    </style>
+</head>
+<body>
+ <div class="container">
+    <div class="header">
+        <h1 class="secrets">Secrets.com</h1>
+        <nav class="navigation">
+          <a href="#">LogIn</a>
+          <a href="#">Register</a>
+        </nav>
+    </div>
+    <div class="body">
+        <h2>A perfect place to store all your secrets</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error recusandae doloremque voluptatem ad repudiandae, voluptas numquam mollitia repellat modi, incidunt temporibus quia suscipit, iste similique tempora quo qui corporis.</p>
+        <button  class="btn-primary">Register Now</button>
+
+    </div>
+
+ </div>
+    
+</body>
+</html>
