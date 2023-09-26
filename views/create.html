@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Create your secret</title>
     <style>
         * {
             margin: 0;
@@ -11,31 +11,44 @@
             box-sizing: border-box;
             font-family:Arial;
         }
-        .header {
-            position: fixed;
+
+        .header{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
             top:0 ;
             left: 0;
             width: 100%;
             padding: 20px 100px;
-            background-color:black ;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 99;
+            background-color: black;
+            
         }
         .secrets{
             font-size: 2em;
             color: orangered;
             user-select: none;
         }
+        .navigation { 
+          display: flex;
+          justify-content: center;
+         align-items: center
+        }
         .navigation a {
-            position: relative;
+           
+            margin: 20px 10px;
             font-size: 1.1em;
             color: white;
             text-decoration: none;
             font-weight: 500;
-            margin-left: 40px;
+            
         }
+           
+        
+        .navigation a.hover-effect:hover {
+            color: orangered;
+
+        }
+
         img{
             float:right;
             margin-bottom: 30px;
@@ -58,7 +71,7 @@
         }
         p{
             font-size: 25px;
-            margin-top: 50px;
+            margin-top: 60px;
             margin-bottom: 40px;
             text-align: left;
         }
@@ -71,32 +84,27 @@
             cursor: pointer;
         }
         .btn-primary:hover {
-        background-color:orangered;
-    }
-
-        
-        
+         background-color:orangered;
+        }
     </style>
 </head>
 <body>
- <div class="container">
-    <div class="header">
-        <h1 class="secrets">Secrets.com</h1>
-        <nav class="navigation">
-          <a href="#">LogIn</a>
-          <a href="#">Register</a>
-        </nav>
+    <div class="container">
+        <div class="header">   
+         <h1 class="secrets">Secrets.com</h1>
+         <nav class="navigation">
+            <a href="#" class="hover-effect">Your Secrets</a>
+            <a href="#">User Name</a>
+         </nav>
+        </div>
+        <div class="body">
+            <h3>A perfect place to store all your secrets</h3>
+            <img src="../images/homepage.png" alt="lock&key" />
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero sapiente saepe tempora illo aut nemo sequi repellat, beatae iste facilis, dolorem fugit unde ut repudiandae placeat. Saepe officiis inventore quasi!</p>
+            <button  class="btn-primary">Create Your Secrets</button>
+
+
+        </div>
     </div>
-    <div class="body">
-
-        <h3>A perfect place to store all your secrets</h3>
-        <img src="./images/homepage.png" alt="lock&key" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error recusandae doloremque voluptatem ad repudiandae, voluptas numquam mollitia repellat modi, incidunt temporibus quia suscipit, iste similique tempora quo qui corporis.</p>
-        <button  class="btn-primary">Register Now</button>
-
-    </div>
-
- </div>
-    
 </body>
 </html>
