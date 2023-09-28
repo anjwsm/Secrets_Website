@@ -2,7 +2,7 @@
 const express = require('express');
 // for data base
 // const mongoose = require("mongoose");
-const app = express();
+const server = express();
 
 //Custom middleware
 server.use((req,res,next)=>{
@@ -13,9 +13,10 @@ server.use((req,res,next)=>{
 // body parser  
 server.use(express.json()); 
 server.use(express.urlencoded({ extended: true}));
-
+// set static file's folder
+server.use(express.static('public'));
 // ssr view engine 
-// app.set('view engine', 'ejs');
+server.set('view engine', 'ejs');
 
 // connect to db
 // mongoose.connect("mongodb://127.0.0.1:27017/secretDB").then(() => {
@@ -26,15 +27,27 @@ server.use(express.urlencoded({ extended: true}));
 //   });
 
 server.get('/' ,(req,res)=>{
-    res.sendFile(__dirname + './homepage.html')
-})
-server.post('/submit',(req,res)=>{
+// landing page
+    res.sendFile(__dirname + '/views/homepage.html')
+});
+server.get('/login',(req,res)=>{
+  //login page
+  res.sendFile(__dirname+'/views/login.html')
+});
+server.get('/register',(req,res)=>{
+  // register page
+  res.sendFile(__dirname+'/views/register.html')
+});
+server.get('/home',(req,res)=>{
+  // 
+  res.sendFile(__dirname+'/views/create.html');
+});
 
-    console.log(req.body);
-    res.sendFile (__dirname + './page1.html');
-})
+server.get('/secrets',(req,res)=>{
+  res.sendFile(__dirname+'/views/secrets.html');
 
-
+});
+c
 
 server.listen(3000,() => {
     console.log("Server running on port 3000");
