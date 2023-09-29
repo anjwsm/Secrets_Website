@@ -47,7 +47,7 @@ server.get('/secrets',(req,res)=>{
   res.sendFile(__dirname+'/views/secrets.html');
 
 });
-c
+
 
 server.listen(3000,() => {
     console.log("Server running on port 3000");
