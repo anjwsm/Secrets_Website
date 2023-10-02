@@ -31,21 +31,13 @@
             color: orangered;
             user-select: none;
         }
-        .navigation { 
-          display: flex;
-          justify-content: center;
-         align-items: center
-        }
         .navigation a {
-           
-            margin: 20px 10px;
             font-size: 1.1em;
             color: white;
             text-decoration: none;
             font-weight: 500;
             
         }
-           
         
         .navigation a.hover-effect:hover {
             color: orangered;
@@ -54,7 +46,8 @@
 
         img{
             float:right;
-            margin-bottom: 30px;
+            margin-top: 5px;
+            margin-bottom: 40px;
         }
         .body {
             text-align: left;
@@ -67,7 +60,7 @@
         h3{
             font-weight: bold;
             font-size: 40px;
-            margin-top: 100px;
+            margin-top: 30px;
             margin-bottom: 40px;
             text-align: left;
 
@@ -96,15 +89,15 @@
         <div class="header">   
          <h1 class="secrets">Secrets.com</h1>
          <nav class="navigation">
-            <a href="#" class="hover-effect">Your Secrets</a>
-            <a href="#">User Name</a>
+            <a class="hover-effect"  href="/secrets?<%= 'userId=' + userId %>"> Your Secrets</a>
+            <a href="#"><%= user %> </a>
          </nav>
         </div>
         <div class="body">
             <h3>A perfect place to store all your secrets</h3>
-            <img src="../images/homepage.png" alt="lock&key" />
+            <img src="../images/homepage.png" alt="lock&key" style="margin-right: 20px ; margin-top: 5px; width: 500px;"/>
             <p>Welcome to secrets.com...This website helps you store informations that are too personal to you with a high level of security so that nobody can excess it.</p>
-            <button  class="btn-primary">Create Your Secrets</button>
+            <button  class="btn-primary"> <a href= href="/secrets?<%= 'userId=' + userId %>">Create Your Secrets </a></button>
 
 
         </div>

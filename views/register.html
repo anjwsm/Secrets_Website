@@ -25,6 +25,7 @@
         .form-container {
           flex: 1;
           border-radius: 5px; 
+          margin-top:5px;
         }
 
         h1{
@@ -36,7 +37,7 @@
             margin-top: 5%;
         }
         form {
-            margin-top: 10px;
+            margin-top: 1%;
             text-align: left; 
         }
 
@@ -46,9 +47,9 @@
         
         }
         input {
-            width: 80%;
+            width: 70%;
             padding: 10px;
-            margin-top: 5px;
+            margin-top: 3px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -83,10 +84,10 @@
     <div class="container">
       
       <div class="image-container">
-       <img src="./images/login.png" alt="loginpic" />
+       <img src="./images/login.png" alt="loginpic" style="margin-left: 10px; width: 500px;" />
       </div>
       <div class="form-container">
-          <form action="./submit" method="post">
+          <form action="/register" method="post">
             <p><label for="name"> User Name</label> </p>
             <p><input type="text"  name="name" /></p>
         
@@ -94,8 +95,8 @@
             <p><input type="email" name="email"/></p>
 
             <p><label for="password">Password</label></p>
-            <p><input type="number" name="password"/></p>
-            <button class="btn-primary">Sign Up</button>
+            <p><input type="password" name="password"/></p>
+            <button type="submit" class="btn-primary">Sign Up</button>
             <h5>If you are already registered, <a href="#">Log in </a></h5> 
           </form>
       </div>
